@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:bottomnavegationbar/src/models/PostsModel.dart';
 import 'package:http/http.dart' as http ; 
 
 class PostApi {
+
   var client = http.Client();
 
   Future<List<PostsModel>> getPosts() async {

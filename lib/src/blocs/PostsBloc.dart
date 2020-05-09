@@ -10,6 +10,7 @@ class PostsBloc {
   final _cambio = PublishSubject<bool>();
 
   Observable<List<PostsModel>> get outPosts => _postsList.stream;
+  
   Observable<bool> get outBool => _cambio.stream;
 
   getPosts()async{

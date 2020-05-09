@@ -1,5 +1,6 @@
 import 'package:bottomnavegationbar/src/blocs/PostsBloc.dart';
 import 'package:bottomnavegationbar/src/models/PostsModel.dart';
+import 'package:bottomnavegationbar/src/ui/page4.dart';
 import 'package:bottomnavegationbar/src/ui/widgets/buttonnavegation.dart';
 import 'package:flutter/material.dart';
 
@@ -57,11 +58,12 @@ void dispose() {
                             Expanded(
                               child: GestureDetector(
                                 onTap: (){
+                                  Navigator.pushNamed(context, '/d',arguments: ScreenArguments(post.title, "mensaje"));
                                   // setState(() {
                                   //   cambio =true;
                                   // });
-                                  cambio=!cambio;
-                                  postBloc.cambioColor(!cambio);
+                                  //cambio=!cambio;
+                                  //postBloc.cambioColor(!cambio);
                                 },
                                 child: StreamBuilder(
                                   stream: postBloc.outBool,
